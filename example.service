@@ -1,0 +1,15 @@
+[Unit]
+Description=Example service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=notify
+ExecStart=/path/to/wrapper.sh
+Restart=always
+RestartSec=1
+TimeoutSec=5
+WatchdogSec=5
+
+[Install]
+WantedBy=multi-user.target
