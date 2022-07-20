@@ -9,7 +9,7 @@ CLEANUP="'kill $(jobs -p) ; rm /var/tmp/example-script.lock'"
 
 trap $CLEANUP EXIT
 
-OPTIONS="-s -a -m -p -l -e"
+OPTIONS="'-s -a -m -p -l -e'"
 
 # Launch our example script/target.  
 /path/to/example-script.sh $OPTIONS &
