@@ -5,7 +5,7 @@
 # In this example, the first portion kills all children of this script (our example script)
 # second portion deletes the lock file for our example script
 
-CLEANUP="kill $(jobs -p) ; rm /var/tmp/example-script.lock"
+CLEANUP="'kill $(jobs -p) ; rm /var/tmp/example-script.lock'"
 
 trap $CLEANUP EXIT
 
